@@ -1,6 +1,6 @@
 === Seminar Registration Manager ===
 Contributors: TonyTheJet
-Donate link: http://www.tony-anderson.info/donate/
+Donate link: http://www.tony-anderson.info/donate.php
 Tags: seminars, payment processing, event, talks, speeches
 Requires at least: 3.1
 Tested up to: 3.3.1
@@ -34,14 +34,13 @@ No screenshots yet available.
 == Changelog ==
 
 
-= 0.1 =
+= 1.0 =
 Plugin is created and submitted for approval!
 
 == Upgrade Notice ==
 
-= 0.1 =
+= 1.0 =
 No need to upgrade...yet!
 
-= 0.1 =
-I'm sure there are plenty of versions coming soon!
+
 
