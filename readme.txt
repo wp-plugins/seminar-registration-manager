@@ -22,7 +22,7 @@ Seminar Registration Manager is a plugin that allows users who hold seminars to 
 
 
 
-Seminar Registration Manager is a plugin that allows users who hold seminars to place a registration form on their site, as well as manage their registrants. Admins can create coupon codes for discounts for the seminar, and registrants can register additional registrants in a single transaction. This plugin currently requires Authorize.net or PayPal Website Payments Pro for payment processing. In the future, additional payment options will be added.
+Seminar Registration Manager is a plugin that allows users who hold seminars, workshops, concerts, or other events to place a registration form on their site, as well as manage their registrants. Admins can create coupon codes for discounts for the event, and registrants can register additional registrants in a single transaction. This plugin currently requires Authorize.net or PayPal Website Payments Pro for payment processing. In the future, additional payment options will be added.
 
 
 
@@ -78,7 +78,9 @@ Plugin is created and submitted for approval!
 = 1.1 =
 
 *Updated default page creator to include a terms and conditions page, and added a constant for terms and conditions.
+
 *Tweaked constants for PayPal Payments Pro
+
 *Changed the plugin to allow different type of event names (concerts, generic events, workshops, etc.) to display on the front-end for more ubiquitous appeal.
 
 
