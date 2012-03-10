@@ -1,6 +1,6 @@
 === Seminar Registration Manager ===
 Contributors: TonyTheJet
-Donate link: http://www.tony-anderson.info/donate/
+Donate link: http://www.tony-anderson.info/donate.php
 Tags: seminars, payment processing, event, talks, speeches
 Requires at least: 3.1
 Tested up to: 3.3.1
