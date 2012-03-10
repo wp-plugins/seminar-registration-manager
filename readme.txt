@@ -60,7 +60,8 @@ Try deactivating and reactivating the plugin. If that doesn't help, contact the 
 
 == Screenshots ==
 
-No screenshots yet available.
+1. SRM back end
+2. Registration page
 
 
 
