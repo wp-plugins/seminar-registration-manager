@@ -4,7 +4,7 @@ Contributors: TonyTheJet
 
 Donate link: http://www.tony-anderson.info/donate.php
 
-Tags: seminars, payment processing, event, talks, speeches
+Tags: seminars, payment processing, event, talks, speeches, concerts, workshops
 
 Requires at least: 3.1
 
