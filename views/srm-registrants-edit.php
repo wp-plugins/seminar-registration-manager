@@ -24,7 +24,7 @@
                         <div class="form-row">
                             <div class="left">Seminar:</div>
                             <div class="right"><strong><?php echo $seminar_data['title']; ?></strong></div>
-                            <div class="clear"></div>
+                            <div class="srm-clear"></div>
                         </div>
                         <div class="form-row">
                             <div class="left">Seminar Location:</div>
@@ -39,12 +39,12 @@
                                 <br />
                                 <?php echo $seminar_data['city']; ?>, <?php echo $seminar_data['state']; ?> <?php echo $seminar_data['zip']; ?>
                             </div>
-                            <div class="clear"></div>
+                            <div class="srm-clear"></div>
                         </div>
                         <div class="form-row">
                             <div class="left">Phone</div>
                             <div class="right"><?php echo $seminar_data['phone']; ?></div>
-                            <div class="clear"></div>
+                            <div class="srm-clear"></div>
                         </div>
                         <div class="form-row">
                             <div class="left">Date(s):</div>
@@ -54,12 +54,12 @@
                                     - <?php echo date('n/j/Y', strtotime($seminar_data['end_date'])); ?>
                                 <?php endif; ?>
                             </div>
-                            <div class="clear"></div>
+                            <div class="srm-clear"></div>
                         </div>
                         <div class="form-row">
                             <div class="left">Time:</div>
                             <div class="right"><?php echo $seminar_data['start_time'];?> - <?php echo $seminar_data['end_time']; ?></div>
-                            <div class="clear"></div>
+                            <div class="srm-clear"></div>
                         </div>
                         <div class="form-row">
                             <div class="left">Registrant Price</div>
@@ -70,17 +70,17 @@
                                     $<?php echo $seminar_data['registrant_price']; ?>
                                 <?php endif; ?>
                             </div>
-                            <div class="clear"></div>
+                            <div class="srm-clear"></div>
                         </div>
                         <div class="form-row">
                             <div class="left">Description</div>
                             <div class="right"><?php echo $seminar_data['description']; ?></div>
-                            <div class="clear"></div>
+                            <div class="srm-clear"></div>
                         </div>
                         <div class="form-row">
                             <div class="left">Seminar Spots Left</div>
                             <div class="right"><?php echo $spots_left; ?></div>
-                            <div class="clear"></div>
+                            <div class="srm-clear"></div>
                         </div>
                     </div>
                     <div class="two-col-right">
@@ -98,35 +98,35 @@
                             <input type="text" name="mname" id="srm-mname" value="<?php if (isset($_POST['mname'])): echo $_POST['mname']; endif; ?>" class="sm <?php if ($registration_fields['mname']==1): ?>required<?php endif; ?>" />&nbsp;
                             <input type="text" name="lname" id="srm-lname" value="<?php if (isset($_POST['lname'])): echo $_POST['lname']; endif; ?>" class="med <?php if ($registration_fields['lname']==1): ?>required<?php endif; ?>" />
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="form-row">
                         <div class="left">Phone:</div>
                         <div class="right">
                             <input type="text" name="phone" id="srm-phone" value="<?php if (isset($_POST['phone'])): echo $_POST['phone']; endif; ?>" class="<?php if ($registration_fields['phone']==1): ?>required<?php endif; ?> phone" />&nbsp;
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="form-row">
                         <div class="left">Fax:</div>
                         <div class="right">
                             <input type="text" name="fax" id="srm-fax" value="<?php if (isset($_POST['fax'])): echo $_POST['fax']; endif; ?>" class="<?php if ($registration_fields['fax']==1): ?>required<?php endif; ?>" />&nbsp;
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="form-row">
                         <div class="left">Email:</div>
                         <div class="right">
                             <input type="text" name="email" id="srm-email" value="<?php if (isset($_POST['email'])): echo $_POST['email']; endif; ?>" class="<?php if ($registration_fields['email']==1): ?>required<?php endif; ?> email" />&nbsp;
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="section-separation">
                         <h3>Additional Attendees</h3>
                         <div class="warning">Note: This area is for additional attendees only. If you have no additional attendees, you may skip this section.</div>
                         <div class="form-row">
                             <div class="left">
-                                Additional Drs.:
+                                Additional Registrants:
                             </div>
                             <div class="right">
                                 <select name="additional_registrants" id="srm-additional_registrants" onchange="handle_additional_registrants('registrants', this.value); srm_total(<?php echo $registrant_price; ?>, jQuery('#srm-additional_registrants').val(), <?php echo $registrant_price; ?>, jQuery('#srm-additional_registrants').val());">
@@ -136,7 +136,7 @@
                                     <?php endfor; ?>
                                 </select>
                             </div>
-                            <div class="clear"></div>
+                            <div class="srm-clear"></div>
                         </div>
                         <div id="srm-additional-registrants-container">
                             <?php if (isset($_POST['additional_registrants_entry'])): ?>
@@ -144,23 +144,23 @@
                                 <?php $i=0; $registrant_type='registrants'; ?>
                                 <?php foreach($_POST['additional_registrants_entry'] as $additional_registrant): ?>
                                     <div class="srm-additional-registrant">
-                                        <div class="clear"><strong><?php echo $i+1; ?></strong></div>
+                                        <div class="srm-clear"><strong><?php echo $i+1; ?></strong></div>
                                         <div class="form-row">
                                             <div class="left">Name:</div>
                                             <div class="right"><input type="text" name="additional_<?php echo $registrant_type; ?>_entry[<?php echo $i; ?>][name]" value="<?php echo $additional_registrant['name']; ?>" /></div>
-                                            <div class="clear"></div>
+                                            <div class="srm-clear"></div>
                                         </div>
                                         <div class="form-row">
                                             <div class="left">Phone:</div>
-                                            <div class="right"><input type="text" name="additional_<?php echo $registrant_type; ?>_entry[<?php echo $i; ?>][phone]" value="<?php echo $additional_registrant['phone']; ?>" /></div><div class="clear"></div>
+                                            <div class="right"><input type="text" name="additional_<?php echo $registrant_type; ?>_entry[<?php echo $i; ?>][phone]" value="<?php echo $additional_registrant['phone']; ?>" /></div><div class="srm-clear"></div>
                                         </div>
                                         <div class="form-row">
                                             <div class="left">Fax:</div>
-                                            <div class="right"><input type="text" name="additional_<?php echo $registrant_type; ?>_entry[<?php echo $i; ?>][fax]" value="<?php echo $additional_registrant['fax']; ?>" /></div><div class="clear"></div>
+                                            <div class="right"><input type="text" name="additional_<?php echo $registrant_type; ?>_entry[<?php echo $i; ?>][fax]" value="<?php echo $additional_registrant['fax']; ?>" /></div><div class="srm-clear"></div>
                                         </div>
                                         <div class="form-row">
                                             <div class="left">Email:</div>
-                                            <div class="right"><input type="text" name="additional_<?php echo $registrant_type; ?>_entry[<?php echo $i; ?>][email]" value="<?php echo $additional_registrant['email']; ?>" /></div><div class="clear"></div>
+                                            <div class="right"><input type="text" name="additional_<?php echo $registrant_type; ?>_entry[<?php echo $i; ?>][email]" value="<?php echo $additional_registrant['email']; ?>" /></div><div class="srm-clear"></div>
                                         </div>
                                     </div>
                                     <?php $i++; ?>
@@ -176,28 +176,28 @@
                         <div class="right">
                             <input type="text" name="billing_name" id="srm-billing_name" value="<?php if (isset($_POST['billing_name'])): echo $_POST['billing_name']; endif; ?>" class="<?php if ($registration_fields['billing_name']==1): ?>required<?php endif; ?>" />&nbsp;
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="form-row">
                         <div class="left">Address:</div>
                         <div class="right">
                             <input type="text" name="address1" id="srm-address1" value="<?php if (isset($_POST['address1'])): echo $_POST['address1']; endif; ?>" class="<?php if ($registration_fields['address1']==1): ?>required<?php endif; ?>" />&nbsp;
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="form-row">
                         <div class="left">Address (line 2):</div>
                         <div class="right">
                             <input type="text" name="address2" id="srm-address2" value="<?php if (isset($_POST['address2'])): echo $_POST['address2']; endif; ?>" class="<?php if ($registration_fields['address2']==1): ?>required<?php endif; ?>" />&nbsp;
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="form-row">
                         <div class="left">City:</div>
                         <div class="right">
                             <input type="text" name="city" id="srm-city" value="<?php if (isset($_POST['city'])): echo $_POST['city']; endif; ?>" class="<?php if ($registration_fields['city']==1): ?>required<?php endif; ?>" />&nbsp;
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="form-row">
                         <div class="left">State:</div>
@@ -208,21 +208,21 @@
                                 <?php endforeach; ?>
                             </select>
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="form-row">
                         <div class="left">Zip:</div>
                         <div class="right">
                             <input type="text" name="zip" id="srm-zip" value="<?php if (isset($_POST['zip'])): echo $_POST['zip']; endif; ?>" class="<?php if ($registration_fields['zip']==1): ?>required<?php endif; ?>" />&nbsp;
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="form-row">
                         <div class="left">Card #:</div>
                         <div class="right">
                             <input type="text" name="card_num" id="srm-card_num" value="<?php if (isset($_POST['card_num'])): echo $_POST['card_num']; endif; ?>" class="<?php if ($registration_fields['card_num']==1): ?>required<?php endif; ?>" />&nbsp;
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="form-row">
                         <div class="left">Card Type:</div>
@@ -234,7 +234,7 @@
                                 <option value="Visa" <?php if ($_POST['card_type']=='Visa'): ?>selected<?php endif; ?>>Visa</option>
                             </select>
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="form-row">
                         <div class="left">Exp. Date:</div>
@@ -250,14 +250,14 @@
                                 <?php endfor; ?>
                             </select>
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="form-row">
                         <div class="left">Total Fee:</div>
                         <div class="right">
                             $<span id="srm-total"><?php echo $registrant_price; ?></span>
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <input type="checkbox" name="agreement" id="srm-agreement" class="required" value="1" /> I agree to the <a href="<?php bloginfo('url');?>/terms-of-registration/" target="_blank">‎terms of registration</a>.
                     <div id="srm-agreement-error" class="srm-error"></div>
@@ -287,7 +287,7 @@
                                 <?php endforeach; ?>
                             </select>
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="form-row">
                         <div class="left">
@@ -296,7 +296,7 @@
                         <div class="right">
                             <input type="text" name="coupon_code" id="srm-coupon_code" maxlength="25" />
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                     <div class="form-row">
                         <div class="left">
@@ -304,7 +304,7 @@
                         </div>
                         <div class="right">
                         </div>
-                        <div class="clear"></div>
+                        <div class="srm-clear"></div>
                     </div>
                 </form>
             </div>

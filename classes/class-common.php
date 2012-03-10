@@ -1,7 +1,7 @@
 <?php
     class SrmCommon{
-		
-		public static function render_filter($include_search=true, $include_dates=false){
+        
+        public static function render_filter($include_search=true, $include_dates=false){
             $return='
                 <div class="srm-search">
                     <form action="" method="get">
@@ -153,10 +153,37 @@
             
             return $return_arr;
         }
-		
-		public static function get_plugin_settings(){
-			global $wpdb;
-			$results=$wpdb->get_results("SELECT * FROM ".SRM_SETTINGS_TABLE, ARRAY_A);
-			return $results;
-		}
+        
+        public static function get_plugin_settings(){
+            global $wpdb;
+            $results = $wpdb->get_results( "SELECT * FROM ".SRM_SETTINGS_TABLE, ARRAY_A );
+            return $results;
+        }
+        
+        public function update_srm_settings($post_vars){
+            global $wpdb;
+            $plugin_settings = SrmCommon::get_plugin_settings();
+            $return_arr = array( 'has_errors' => false, 'msg' => 'Settings were updated successfully!' );
+            foreach ( $plugin_settings as $plugin_setting ):
+                if ( isset( $post_vars[$plugin_setting['key']] )):
+                    $wpdb->update(
+                        SRM_SETTINGS_TABLE,
+                        array(
+                            'value' => $post_vars[$plugin_setting['key']]
+                        ),
+                        array(
+                            'key' => $plugin_setting['key']
+                        ),
+                        array(
+                            '%s'
+                        ),
+                        array(
+                            '%s'
+                        )
+                    );
+                endif;
+            endforeach;
+            
+            return $return_arr;
+        }
     }

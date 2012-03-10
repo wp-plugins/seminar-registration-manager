@@ -42,5 +42,6 @@ Plugin is created and submitted for approval!
 = 1.0 =
 No need to upgrade...yet!
 
-
+= 1.0 =
+I'm sure there are plenty of versions coming soon!
 

@@ -33,3 +33,11 @@
     .srm-form .section-separation{ border-top:1px solid #333333; margin:8px 0; padding:8px 0; }
     .srm-form .warning, .srm-form .srm-error{ font-size:12px; font-weight:bold; color:#CC0000; }
 /*******/
+
+/*SRM Misc*/
+    .srm-clear{ clear:both; }
+    .srm-content{ max-width:700px; }
+    .srm-content ul{ padding-left:20px; }
+    .srm-content ul li{ list-style-type:disc; }
+    .srm-hide{ display: none; }
+/**********/

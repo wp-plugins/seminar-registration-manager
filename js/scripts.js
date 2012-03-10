@@ -77,7 +77,7 @@
         var invalid_class='invalid';
         
         //check that all required fields are populated
-        jQuery('#'+form_id).find('input.required').each(function(){
+        jQuery('#'+form_id).find('.required').each(function(){
             if (jQuery(this).val().length==''){
                 jQuery(this).addClass(invalid_class);
                 form_valid=false;
@@ -93,20 +93,22 @@
             }
         });
         
-        //textareas
-        jQuery('#'+form_id).find('textarea.required').each(function(){
-            if (jQuery(this).text()==''){
-                jQuery(this).addClass(invalid_class);
-                form_valid=false;
-            } else {
-                jQuery(this).removeClass(invalid_class);
-            }
-        });
-        
         if (form_valid){
             return true;
         } else {
             return false;
         }
+    }
+    
+    //payment gateway extra fields
+    function toggle_payment_gateway_fields(){
+        var selected_gateway=jQuery('#srm-SRM_PAYMENT_GATEWAY').val();
+        jQuery('.srm-payment-credentials').each(function(){
+            if ( jQuery( this ).attr( 'id' ) == 'srm-'+selected_gateway){
+                jQuery(this).removeClass('srm-hide');
+            } else {
+                jQuery(this).addClass('srm-hide');
+            }
+        });
     }
 /**********/
