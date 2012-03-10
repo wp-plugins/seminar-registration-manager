@@ -3,10 +3,10 @@
 Plugin Name: Seminar Registration Manager
 Plugin URI: http://leadgenix.com/
 Description: Plugin to handle seminar registrations, integrated with eShop
-Version: .1
+Version: 1.0
 Author: Tony Anderson
 Author URI: http://www.leadgenix.com
-License: GPL3
+License: GPL3 
 */
 define( "DEBUG",true );
 require_once( 'config.inc' );
